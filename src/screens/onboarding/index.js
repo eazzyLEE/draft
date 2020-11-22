@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StatusBar, Text, View, Image, TouchableOpacity } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import { Actions } from 'react-native-router-flux';
+import ProgressCircle from 'react-native-progress-circle';
 import { styles } from './styles';
 import * as Colors from '../../components/Colors';
 import {
@@ -10,32 +10,37 @@ import {
   thirdOnboarding,
 } from '../../../assets/images';
 import { ParagraphText } from '../../components';
+import { RightChevrolet } from '../../../assets/svgs';
 
 const slides = [
   {
     key: 'first',
-    title: 'A Giftcard for Everyone',
+    title: 'Sending money just got simpler and faster',
     text:
-      'Need an iTunes card? Got steam Steam? Buy or Sell Giftcard at the snap of a finger.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing. Id in tincidunt venenatis etiam.',
     source: firstOnboarding,
   },
   {
     key: 'second',
-    title: 'Refill',
+    title: 'Paying bills with zero hassle is all you need',
     text:
-      'Overloading Airtime Is Not The End Of The World. Swap your airtime for cash + plenty more.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing. Id in tincidunt venenatis etiam.',
     source: secondOnboarding,
   },
   {
     key: 'third',
-    title: 'Experience Bitcoin like Never before',
+    title: 'Buy airtime and stay connected always',
     text:
-      'Buy, Sell, Send, Receive, Store or Spend. Patricia lets you do the most with your Bitcoin.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing. Id in tincidunt venenatis etiam.',
     source: thirdOnboarding,
   },
 ];
 
 export default class Onboarding extends Component {
+  state = {
+    page: 1,
+  };
+
   componentDidMount() {
     StatusBar.setBarStyle('light-content');
   }
@@ -46,11 +51,11 @@ export default class Onboarding extends Component {
   }
 
   _renderItem = ({ item }) => (
-    <View>
+    <View style={styles.background}>
       <Image
         source={item.source}
-        style={styles.patriciaLogo}
-        resizeMode="contain"
+        style={styles.onboardingImage}
+        resizeMode="cover"
       />
       <View style={styles.titleBlock}>
         <Text style={styles.title}>{item.title}</Text>
@@ -59,21 +64,31 @@ export default class Onboarding extends Component {
       <View style={styles.bottomRow}>
         <TouchableOpacity
           style={styles.createAccountButton}
-          onPress={() => Actions.create_account({ type: 'reset' })}>
-          <ParagraphText
-            title="Create an account"
-            style={styles.createAccountText}
-          />
+          // onPress={() => Actions.create_account({ type: 'reset' })}
+        >
+          <ParagraphText title="Get Started" style={styles.createAccountText} />
         </TouchableOpacity>
-        {/* <Button
-          title="Sign In"
-          style={styles.signButton}
-          buttonStyle={styles.signInButton}
-          onPress={() => Actions.sign_in({ type: 'reset' })}
-        /> */}
       </View>
     </View>
   );
+
+  _renderNextButton = () => {
+    return (
+      <View style={styles.buttonContainer}>
+        <ProgressCircle
+          percent={(this.state.page / 3) * 100}
+          radius={40}
+          borderWidth={3}
+          color={Colors.Orange}
+          shadowColor={Colors.Denim}
+          bgColor={Colors.DarkBlue}>
+          <View style={styles.nextButton}>
+            <RightChevrolet />
+          </View>
+        </ProgressCircle>
+      </View>
+    );
+  };
 
   render() {
     return (
@@ -81,9 +96,11 @@ export default class Onboarding extends Component {
         data={slides}
         renderItem={this._renderItem}
         dotStyle={styles.dotStyle}
-        activeDotStyle={styles.activeDotStyle}
-        showNextButton={false}
+        activeDotStyle={styles.dotStyle}
+        showNextButton={true}
         showDoneButton={false}
+        renderNextButton={this._renderNextButton}
+        onSlideChange={(index) => this.setState({ page: index + 1 })}
       />
     );
   }
