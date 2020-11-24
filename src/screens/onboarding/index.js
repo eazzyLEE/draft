@@ -41,15 +41,6 @@ export default class Onboarding extends Component {
     page: 1,
   };
 
-  componentDidMount() {
-    StatusBar.setBarStyle('light-content');
-  }
-
-  componentWillUnmount() {
-    StatusBar.setBackgroundColor(Colors.DarkBlue);
-    StatusBar.setBarStyle('light-content');
-  }
-
   _renderItem = ({ item }) => (
     <View style={styles.background}>
       <Image
@@ -92,16 +83,19 @@ export default class Onboarding extends Component {
 
   render() {
     return (
-      <AppIntroSlider
-        data={slides}
-        renderItem={this._renderItem}
-        dotStyle={styles.dotStyle}
-        activeDotStyle={styles.dotStyle}
-        showNextButton={true}
-        showDoneButton={false}
-        renderNextButton={this._renderNextButton}
-        onSlideChange={(index) => this.setState({ page: index + 1 })}
-      />
+      <>
+        <StatusBar backgroundColor={Colors.DarkBlue} barStyle="light-content" />
+        <AppIntroSlider
+          data={slides}
+          renderItem={this._renderItem}
+          dotStyle={styles.dotStyle}
+          activeDotStyle={styles.dotStyle}
+          showNextButton={true}
+          showDoneButton={false}
+          renderNextButton={this._renderNextButton}
+          onSlideChange={(index) => this.setState({ page: index + 1 })}
+        />
+      </>
     );
   }
 }
