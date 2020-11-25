@@ -99,6 +99,8 @@ const styles = StyleSheet.create({
   },
   headerTextStyle: {
     fontSize: 22,
+    color: Colors.BlueWood,
+    fontWeight: 'bold',
   },
   menuTextStyle: {
     fontSize: 20,
@@ -116,8 +118,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   regularTextStyle: {
-    fontSize: 12,
+    fontSize: 16,
     fontStyle: 'normal',
+    color: Colors.BaliHai,
   },
   doubleView: {
     flexDirection: 'row',

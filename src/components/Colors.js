@@ -3,3 +3,6 @@ export const White = '#FFFFFF';
 export const Smoke400 = '#99BDDB';
 export const Orange = '#E99B4F';
 export const Denim = '#106CBB';
+export const Endeavour = '#0059A5';
+export const BlueWood = '#28374C';
+export const BaliHai = '#8397B1';
