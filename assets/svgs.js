@@ -31,3 +31,26 @@ export const ButtonChevrolet = (props) => (
     />
   </Svg>
 );
+
+export const Lock = (props) => (
+  <Svg
+    width={14}
+    height={17}
+    viewBox="0 0 14 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M10.87 16H3.13C1.96 16 1 15.115 1 14.033V7.148c0-1.082.959-1.968 2.13-1.968h7.74c1.171 0 2.13.886 2.13 1.968v6.885C13 15.115 12.041 16 10.87 16zM11 5.18c-.133-2.311-1.867-4.13-4-4.13S3.178 2.868 3 5.18"
+      stroke="#8397B1"
+      strokeWidth={1.5}
+      strokeMiterlimit={10}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M7 12.557c-.55 0-1-.442-1-.983V9.607c0-.541.45-.984 1-.984s1 .443 1 .984v1.967c0 .54-.45.983-1 .983z"
+      fill="#8397B1"
+    />
+  </Svg>
+);

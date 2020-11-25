@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: White,
-    width: wp(375),
+    width: wp(360),
     marginTop: hp(49),
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,

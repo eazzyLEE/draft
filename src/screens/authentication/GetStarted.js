@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { Actions } from 'react-native-router-flux';
 import { mainLogo, phoneCard } from '../../../assets/images';
 import { DarkBlue, Endeavour, HeaderText, RegularText } from '../../components';
 import { Button } from '../../components/Button';
@@ -30,7 +31,11 @@ const GetStarted = () => {
             title="Lorem ipsum dolor sit amet, consectetur."
             style={styles.subText}
           />
-          <Button title="Log In" buttonStyle={styles.logIn} />
+          <Button
+            title="Log In"
+            buttonStyle={styles.logIn}
+            onPress={() => Actions.sign_in()}
+          />
           <Button title="Sign Up" buttonStyle={styles.signUp} light />
         </MainView>
       </LinearGradient>

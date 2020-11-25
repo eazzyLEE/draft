@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { hp, wp } from '../../components';
+import { BaliHai, Boticelli, DarkBlue, hp, wp } from '../../components';
 
 export const getStartedStyle = StyleSheet.create({
   background: {
@@ -46,11 +46,92 @@ export const getStartedStyle = StyleSheet.create({
   logIn: {
     alignSelf: 'center',
     marginTop: hp(30),
-    marginLeft: -wp(5),
   },
   signUp: {
     alignSelf: 'center',
     marginTop: hp(20),
-    marginLeft: -wp(5),
+  },
+});
+
+export const signinStyle = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: DarkBlue,
+  },
+  scrollBackground: {
+    flex: 1,
+  },
+  fullHeight: {
+    position: 'absolute',
+    flex: 1,
+    marginTop: hp(0),
+    height: hp(700),
+  },
+  mainLogo: {
+    width: wp(210),
+    height: hp(40),
+    marginTop: hp(10),
+    marginLeft: wp(17),
+  },
+  mainView: {
+    marginTop: hp(218),
+  },
+  leadText: {
+    marginTop: hp(32),
+    fontSize: 22,
+    alignSelf: 'flex-start',
+    marginLeft: wp(22),
+  },
+  subText: {
+    marginTop: hp(12),
+    alignSelf: 'flex-start',
+    marginLeft: wp(22),
+  },
+  emailInput: {
+    marginTop: hp(36),
+  },
+  passwordInput: {
+    marginTop: hp(20),
+  },
+  midGrid: {
+    width: wp(328),
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    marginLeft: wp(15),
+    marginTop: hp(24),
+  },
+  loginView: {
+    right: 0,
+  },
+  logIn: {
+    width: wp(156),
+    position: 'relative',
+    right: 0,
+    marginLeft: wp(59),
+  },
+  forgotText: {
+    color: BaliHai,
+    marginLeft: wp(12),
+    fontWeight: 'bold',
+  },
+  dividerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: wp(328),
+    marginTop: hp(26),
+  },
+  firstDivider: {
+    width: wp(142),
+    height: 1,
+    backgroundColor: Boticelli,
+  },
+  dividerText: {
+    color: BaliHai,
+    lineHeight: 16,
+  },
+  createAccountButton: {
+    marginTop: hp(15),
   },
 });
