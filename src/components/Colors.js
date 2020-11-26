@@ -7,3 +7,5 @@ export const Endeavour = '#0059A5';
 export const BlueWood = '#28374C';
 export const BaliHai = '#8397B1';
 export const Boticelli = '#D2DDEB';
+export const CongressBlue = '#005095';
+export const Selago = '#F3F8FD';

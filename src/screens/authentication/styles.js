@@ -1,5 +1,14 @@
 import { StyleSheet } from 'react-native';
-import { BaliHai, Boticelli, DarkBlue, hp, wp } from '../../components';
+import {
+  BaliHai,
+  Boticelli,
+  DarkBlue,
+  hp,
+  Orange,
+  Selago,
+  White,
+  wp,
+} from '../../components';
 
 export const getStartedStyle = StyleSheet.create({
   background: {
@@ -110,6 +119,10 @@ export const signinStyle = StyleSheet.create({
     right: 0,
     marginLeft: wp(59),
   },
+  forgotButton: {
+    height: hp(22),
+    justifyContent: 'center',
+  },
   forgotText: {
     color: BaliHai,
     marginLeft: wp(12),
@@ -133,5 +146,88 @@ export const signinStyle = StyleSheet.create({
   },
   createAccountButton: {
     marginTop: hp(15),
+  },
+});
+
+export const forgotPasswordStyles = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: DarkBlue,
+  },
+  backIconRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: wp(16),
+    marginTop: hp(10),
+  },
+  forgotText: {
+    fontSize: 18,
+    color: White,
+    marginLeft: wp(16),
+  },
+  mainView: {
+    marginTop: hp(20),
+  },
+  header: {
+    marginTop: hp(32),
+    width: wp(328),
+    letterSpacing: 0.01,
+    lineHeight: 26,
+  },
+  input: {
+    marginTop: hp(32),
+  },
+  button: {
+    marginTop: hp(24),
+  },
+  divider: {
+    width: wp(328),
+    height: hp(1),
+    marginTop: hp(32),
+    backgroundColor: Selago,
+  },
+  bottomRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: hp(20),
+    alignSelf: 'flex-start',
+    marginLeft: wp(16),
+  },
+  signIn: {
+    marginLeft: wp(8),
+    color: Orange,
+    fontSize: 16,
+  },
+});
+
+export const resetStatusStyles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
+  thumbImage: {
+    width: wp(493),
+    height: wp(493),
+    left: -wp(66),
+  },
+  mainView: {
+    position: 'absolute',
+    zIndex: 400,
+    marginTop: hp(463),
+  },
+  headerText: {
+    marginTop: hp(39),
+    marginLeft: wp(16),
+    alignSelf: 'flex-start',
+  },
+  subText: {
+    marginTop: hp(12),
+    marginLeft: wp(16),
+    alignSelf: 'flex-start',
+    color: BaliHai,
+    fontSize: 16,
+    width: wp(320),
+  },
+  button: {
+    marginTop: hp(40),
   },
 });

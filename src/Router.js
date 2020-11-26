@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
+import ForgotPassword from './screens/authentication/ForgotPassword';
 import GetStarted from './screens/authentication/GetStarted';
+import ResetStatus from './screens/authentication/ResetStatus';
 import SignIn from './screens/authentication/SignIn';
 import Onboarding from './screens/onboarding';
 
@@ -12,6 +14,8 @@ export default class RouterComponent extends Component {
           <Scene key="onboarding" component={Onboarding} initial />
           <Scene key="get_started" component={GetStarted} />
           <Scene key="sign_in" component={SignIn} />
+          <Scene key="forgot_password" component={ForgotPassword} />
+          <Scene key="reset_status" component={ResetStatus} />
         </Scene>
       </Router>
     );

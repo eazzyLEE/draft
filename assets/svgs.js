@@ -54,3 +54,19 @@ export const Lock = (props) => (
     />
   </Svg>
 );
+
+export const LeftChevrolet = (props) => (
+  <Svg
+    width={11}
+    height={18}
+    viewBox="0 0 11 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M9.728 16.725a.966.966 0 01-.67.275.966.966 0 01-.669-.275L1.276 9.649a.943.943 0 010-1.332l7.11-7.079a.951.951 0 011.579.678.94.94 0 01-.24.654L3.287 8.983l6.442 6.41a.952.952 0 010 1.332z"
+      fill="#fff"
+      stroke="#fff"
+    />
+  </Svg>
+);

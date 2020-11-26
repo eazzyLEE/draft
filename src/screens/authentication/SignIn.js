@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Image, Keyboard, View } from 'react-native';
+import { Image, Keyboard, TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-elements';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { Actions } from 'react-native-router-flux';
 import { mainLogo } from '../../../assets/images';
 import { Lock } from '../../../assets/svgs';
 import {
@@ -64,10 +65,14 @@ export default class SignIn extends Component {
             />
             <View style={styles.midGrid}>
               <Lock />
-              <ParagraphText
-                title="Forgot Password"
-                style={styles.forgotText}
-              />
+              <TouchableOpacity
+                style={styles.forgotButton}
+                onPress={() => Actions.forgot_password()}>
+                <ParagraphText
+                  title="Forgot Password"
+                  style={styles.forgotText}
+                />
+              </TouchableOpacity>
               <View style={styles.loginView}>
                 <Button title="Sign In" style={styles.logIn} />
               </View>
