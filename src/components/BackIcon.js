@@ -5,9 +5,11 @@ import { LeftChevrolet } from '../../assets/svgs';
 import { CongressBlue } from './Colors';
 import { hp, wp } from './utils';
 
-const BackIcon = () => {
+const BackIcon = ({ onPress }) => {
   return (
-    <TouchableOpacity style={styles.background} onPress={() => Actions.pop()}>
+    <TouchableOpacity
+      style={styles.background}
+      onPress={onPress || (() => Actions.pop())}>
       <LeftChevrolet />
     </TouchableOpacity>
   );

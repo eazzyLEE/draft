@@ -11,6 +11,7 @@ import {
 } from '../../../components';
 import BackIcon from '../../../components/BackIcon';
 import { MainView } from '../../../components/View';
+import FrameFour from './FrameFour';
 import FrameOne from './FrameOne';
 import FrameThree from './FrameThree';
 import FrameTwo from './FrameTwo';
@@ -18,10 +19,12 @@ import { registerStyles as styles } from './styles';
 
 export default class Register extends Component {
   state = {
-    scene: 3,
+    scene: 4,
   };
 
   goToScreen = (index) => this.setState({ scene: index });
+
+  goBack = () => this.setState({ scene: this.state.scene - 1 });
 
   render() {
     const frame = () => {
@@ -32,16 +35,18 @@ export default class Register extends Component {
         case 3: {
           return <FrameThree proceed={() => this.goToScreen(4)} />;
         }
+        case 4: {
+          return <FrameFour proceed={() => this.goToScreen(5)} />;
+        }
         default: {
           return <FrameOne proceed={() => this.goToScreen(2)} />;
         }
       }
     };
-    console.log(this.state.screen);
     return (
       <View style={styles.background}>
         <View style={styles.backIconRow}>
-          <BackIcon />
+          <BackIcon onPress={() => this.goBack()} />
           <HeaderText title="Get Started" style={styles.headerText} />
           <View style={styles.progressContainer}>
             <Progress.Bar

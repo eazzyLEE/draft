@@ -264,3 +264,51 @@ export const frameThree = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+
+export const frameFour = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
+  leadText: {
+    marginTop: hp(32),
+    marginLeft: wp(16),
+    marginBottom: hp(16),
+    width: wp(328),
+  },
+  itemCheckView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: hp(10),
+  },
+  nullCheck: {
+    width: wp(15),
+    height: wp(15),
+    borderRadius: wp(15) / 2,
+    backgroundColor: Boticelli,
+  },
+  checkWrapper: {
+    marginLeft: wp(15),
+    marginTop: hp(22),
+  },
+  checkText: {
+    marginLeft: wp(10),
+    color: BaliHai,
+    fontSize: 14,
+  },
+  checkedText: {
+    marginLeft: wp(10),
+    color: BlueWood,
+    fontSize: 14,
+    textDecorationLine: 'line-through',
+  },
+  divider: {
+    width: wp(360),
+    marginTop: hp(275),
+    backgroundColor: Selago,
+    height: hp(2),
+  },
+  button: {
+    marginTop: hp(12),
+    alignSelf: 'center',
+  },
+});
