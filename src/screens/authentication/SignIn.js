@@ -86,6 +86,7 @@ export default class SignIn extends Component {
               title="Create a new account"
               light
               style={styles.createAccountButton}
+              onPress={() => Actions.register()}
             />
           </MainView>
         </KeyboardAwareScrollView>

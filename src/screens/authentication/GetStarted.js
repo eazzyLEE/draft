@@ -36,7 +36,12 @@ const GetStarted = () => {
             buttonStyle={styles.logIn}
             onPress={() => Actions.sign_in()}
           />
-          <Button title="Sign Up" buttonStyle={styles.signUp} light />
+          <Button
+            title="Sign Up"
+            buttonStyle={styles.signUp}
+            onPress={() => Actions.register()}
+            light
+          />
         </MainView>
       </LinearGradient>
     </>

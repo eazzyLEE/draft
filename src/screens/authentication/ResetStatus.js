@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { thumbImg } from '../../../assets/images';
 import { HeaderText, ParagraphText } from '../../components';
 import { Button } from '../../components/Button';
@@ -16,7 +17,11 @@ const ResetStatus = () => {
           title="Please check your email inbox for a password reset link"
           style={styles.subText}
         />
-        <Button title="Proceed to Login" style={styles.button} />
+        <Button
+          title="Proceed to Login"
+          style={styles.button}
+          onPress={() => Actions.sign_in()}
+        />
       </MainView>
     </View>
   );
