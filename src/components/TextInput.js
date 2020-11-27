@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
     paddingTop: hp(8),
+    width: wp(328),
+    alignSelf: 'center',
     // paddingBottom: hp(5),
     paddingLeft: wp(5),
     height: hp(52),

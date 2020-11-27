@@ -23,7 +23,7 @@ const Selector = ({ title, subText, select, selected }) => (
   </TouchableOpacity>
 );
 
-export default function FrameOne() {
+export default function FrameOne({ proceed }) {
   const [selected, select] = useState(0);
   return (
     <View>
@@ -44,7 +44,12 @@ export default function FrameOne() {
         select={() => select(2)}
       />
       <Divider style={styles.divider} />
-      <Button title="Continue" style={styles.button} disabled={!selected} />
+      <Button
+        title="Continue"
+        style={styles.button}
+        disabled={!selected}
+        onPress={() => proceed()}
+      />
     </View>
   );
 }

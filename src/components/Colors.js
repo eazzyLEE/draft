@@ -13,3 +13,4 @@ export const CuriousBlue = '#1F7DCD';
 export const Fiord = '#414D63';
 export const BridalHeath = '#FFF8F0';
 export const Negroni = '#FFE4C5';
+export const AthensGray = '#F5F7F9';
