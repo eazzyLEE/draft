@@ -9,3 +9,7 @@ export const BaliHai = '#8397B1';
 export const Boticelli = '#D2DDEB';
 export const CongressBlue = '#005095';
 export const Selago = '#F3F8FD';
+export const CuriousBlue = '#1F7DCD';
+export const Fiord = '#414D63';
+export const BridalHeath = '#FFF8F0';
+export const Negroni = '#FFE4C5';

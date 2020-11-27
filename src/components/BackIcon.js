@@ -1,12 +1,13 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { LeftChevrolet } from '../../assets/svgs';
 import { CongressBlue } from './Colors';
 import { hp, wp } from './utils';
 
 const BackIcon = () => {
   return (
-    <TouchableOpacity style={styles.background}>
+    <TouchableOpacity style={styles.background} onPress={() => Actions.pop()}>
       <LeftChevrolet />
     </TouchableOpacity>
   );
