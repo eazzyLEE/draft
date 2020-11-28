@@ -5,7 +5,10 @@ import { hp, wp } from './utils';
 import { BaliHai, Boticelli } from './Colors';
 import { touchId } from '../../assets/images';
 
-const Input = ({ icon, label, style, containerStyle, value, onChange }) => {
+const Input = (
+  { icon, label, style, containerStyle, value, onChange, keyboardType },
+  props,
+) => {
   return (
     <View style={[styles.container, icon && styles.iconView, containerStyle]}>
       <Item
@@ -17,6 +20,8 @@ const Input = ({ icon, label, style, containerStyle, value, onChange }) => {
           style={[styles.input, icon && styles.iconInput, style]}
           value={value}
           onChangeText={onChange}
+          keyboardType={keyboardType}
+          {...props}
         />
       </Item>
       {icon ? (

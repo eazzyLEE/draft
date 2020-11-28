@@ -312,3 +312,64 @@ export const frameFour = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+
+export const frameFive = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
+  leadText: {
+    marginTop: hp(32),
+    marginLeft: wp(16),
+    marginBottom: hp(16),
+    width: wp(328),
+  },
+  bvnRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: wp(16),
+    marginTop: hp(24),
+  },
+  bvnText: {
+    fontSize: 14,
+    color: Orange,
+    marginLeft: wp(9),
+  },
+  dobInput: {
+    marginTop: hp(20),
+  },
+  bvnInfo: {
+    width: wp(328),
+    height: hp(112),
+    borderRadius: 10,
+    backgroundColor: AthensGray,
+    marginTop: hp(32),
+    alignSelf: 'center',
+  },
+  bvnHeader: {
+    marginTop: hp(16),
+    fontSize: 14,
+    color: BaliHai,
+    marginLeft: wp(16),
+  },
+  subText: {
+    marginTop: hp(5),
+    fontSize: 13,
+    color: BaliHai,
+    marginLeft: wp(16),
+    lineHeight: 15,
+    width: wp(296),
+  },
+  frameSixDivider: {
+    marginTop: hp(340),
+  },
+  divider: {
+    width: wp(360),
+    marginTop: hp(255),
+    backgroundColor: Selago,
+    height: hp(2),
+  },
+  button: {
+    marginTop: hp(12),
+    alignSelf: 'center',
+  },
+});
