@@ -18,6 +18,7 @@ export default function FrameTwo({ proceed }) {
         value={phone}
         onChange={(value) => setPhone(value)}
         containerStyle={styles.input}
+        keyboardType="number-pad"
       />
 
       <View style={styles.termsContainer}>

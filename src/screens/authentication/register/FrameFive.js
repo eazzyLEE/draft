@@ -18,6 +18,7 @@ export default function FrameFive({ proceed }) {
           value={bvn}
           onChange={(value) => setBvn(value)}
           containerStyle={styles.input}
+          keyboardType="number-pad"
         />
         <View style={styles.bvnRow}>
           <Plus />

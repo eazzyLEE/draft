@@ -373,3 +373,39 @@ export const frameFive = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+
+export const frameEight = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
+  leadText: {
+    marginTop: hp(32),
+    marginLeft: wp(16),
+    marginBottom: hp(16),
+    width: wp(328),
+  },
+  cameraView: {
+    width: wp(324),
+    height: hp(444),
+    alignSelf: 'center',
+    borderRadius: 8,
+  },
+  divider: {
+    width: wp(360),
+    marginTop: hp(255),
+    backgroundColor: Selago,
+    height: hp(2),
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: wp(324),
+    justifyContent: 'space-between',
+    alignSelf: 'center',
+  },
+  button: {
+    marginTop: hp(12),
+    alignSelf: 'center',
+    width: wp(156),
+  },
+});
