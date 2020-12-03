@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StatusBar, Text, View, Image, TouchableOpacity } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import ProgressCircle from 'react-native-progress-circle';
+import { Actions } from 'react-native-router-flux';
 import { styles } from './styles';
 import * as Colors from '../../components/Colors';
 import {
@@ -55,8 +56,7 @@ export default class Onboarding extends Component {
       <View style={styles.bottomRow}>
         <TouchableOpacity
           style={styles.createAccountButton}
-          // onPress={() => Actions.create_account({ type: 'reset' })}
-        >
+          onPress={() => Actions.get_started({ type: 'reset' })}>
           <ParagraphText title="Get Started" style={styles.createAccountText} />
         </TouchableOpacity>
       </View>

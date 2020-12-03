@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "499634451355",
+    "firebase_url": "https://trustbanc-digital.firebaseio.com",
+    "project_id": "trustbanc-digital",
+    "storage_bucket": "trustbanc-digital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499634451355:android:dcccb24cdf4744066c673e",
+        "android_client_info": {
+          "package_name": "com.trustbanc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499634451355-m8qo9d9n2q63jhgut10ebioen1o5v0q7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trustbanc",
+            "certificate_hash": "9960dff7287985c03e9010301d1711b399bf6587"
+          }
+        },
+        {
+          "client_id": "499634451355-8qb5gjjk6q5bae8sa6hv9cva9c83nn0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkDgOQKcGvPSCX34JmEroVu3tiFqp0Xnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499634451355-8qb5gjjk6q5bae8sa6hv9cva9c83nn0v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "499634451355-1dd6ol9ogdv29t494uvnd24a0u03acv6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trustbanc.digitial",
+                "app_store_id": "1480393766"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499634451355:android:932be1be50883ef96c673e",
+        "android_client_info": {
+          "package_name": "com.trustbanc.digital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499634451355-8qb5gjjk6q5bae8sa6hv9cva9c83nn0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkDgOQKcGvPSCX34JmEroVu3tiFqp0Xnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499634451355-8qb5gjjk6q5bae8sa6hv9cva9c83nn0v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "499634451355-1dd6ol9ogdv29t494uvnd24a0u03acv6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trustbanc.digitial",
+                "app_store_id": "1480393766"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
