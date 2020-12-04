@@ -201,6 +201,11 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    implementation(project(':react-native-camera'),  {
+        exclude group: "com.google.android.gms"
+        exclude group: "com.google.firebase", module: "firebase-ml-vision-face-model"
+    })
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
