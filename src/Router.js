@@ -5,6 +5,7 @@ import GetStarted from './screens/authentication/GetStarted';
 import Register from './screens/authentication/register';
 import ResetStatus from './screens/authentication/ResetStatus';
 import SignIn from './screens/authentication/SignIn';
+import Dashboard from './screens/dashboard';
 import Onboarding from './screens/onboarding';
 
 export default class RouterComponent extends Component {
@@ -18,6 +19,7 @@ export default class RouterComponent extends Component {
           <Scene key="forgot_password" component={ForgotPassword} />
           <Scene key="reset_status" component={ResetStatus} />
           <Scene key="register" component={Register} />
+          <Scene key="dashboard" component={Dashboard} />
         </Scene>
       </Router>
     );
