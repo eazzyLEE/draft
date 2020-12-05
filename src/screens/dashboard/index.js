@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Image, StatusBar, TouchableOpacity, View } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { kycInfo, mainLogo, profileImage } from '../../../assets/images';
 import {
@@ -60,7 +61,11 @@ export default class Dashboard extends Component {
             style={styles.mainLogo}
             resizeMode="contain"
           />
-          <BellNotification />
+          <TouchableOpacity
+            style={styles.notificationButton}
+            onPress={() => Actions.notifications()}>
+            <BellNotification />
+          </TouchableOpacity>
         </View>
         <View style={styles.kycBanner}>
           <View style={styles.bannerRow}>

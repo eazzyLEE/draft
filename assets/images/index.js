@@ -8,3 +8,6 @@ export const thumbImg = require('./thumb-pinkbg.png');
 export const profileImage = require('./profile-img.png');
 export const kycInfo = require('./kyc-info.png');
 export const sunrise = require('./sunrise.png');
+export const airtel = require('./airtel.png');
+export const dstv = require('./dstv.png');
+export const gtbank = require('./gtbank.png');

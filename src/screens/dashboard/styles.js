@@ -1,5 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { DarkBlue, DarkBlue100, hp, Orange, White, wp } from '../../components';
+import {
+  BlueWood,
+  DarkBlue,
+  DarkBlue100,
+  Grey100,
+  hp,
+  Orange,
+  Smoke400,
+  White,
+  wp,
+} from '../../components';
 
 export const dashboardStyles = StyleSheet.create({
   background: {
@@ -22,6 +32,12 @@ export const dashboardStyles = StyleSheet.create({
   mainLogo: {
     width: wp(105),
     height: hp(20),
+  },
+  notificationButton: {
+    width: wp(32),
+    height: wp(32),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   kycBanner: {
     width: wp(328),
@@ -77,5 +93,66 @@ export const dashboardStyles = StyleSheet.create({
     backgroundColor: Orange,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+});
+
+export const notificationStyles = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: DarkBlue,
+  },
+  backIconRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: wp(16),
+    marginTop: hp(10),
+  },
+  mainView: {
+    marginTop: hp(20),
+  },
+  screenTitle: {
+    fontSize: 18,
+    color: White,
+    marginLeft: wp(16),
+  },
+  recent: {
+    alignSelf: 'flex-start',
+    marginTop: hp(32),
+    marginLeft: wp(16),
+  },
+  notifImage: {
+    width: wp(40),
+    height: hp(40),
+  },
+  itemRow: {
+    width: wp(328),
+    marginTop: hp(16),
+  },
+  accountTypeColumn: {
+    marginLeft: wp(19),
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  description: {
+    fontSize: 14,
+    width: wp(232),
+    color: BlueWood,
+  },
+  time: {
+    position: 'absolute',
+    right: 0,
+    fontSize: 14,
+    color: Smoke400,
+    // marginLeft: wp()
+  },
+  accountDivider: {
+    width: wp(237),
+    height: 2,
+    alignSelf: 'flex-end',
+    backgroundColor: Grey100,
+    marginTop: hp(16),
+    opacity: 0.5,
   },
 });

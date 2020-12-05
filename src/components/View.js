@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Image as ImageFrame, StyleSheet, View } from 'react-native';
 import { Divider } from 'react-native-elements';
 import {
   AirtimeIcon,
@@ -21,6 +21,10 @@ export const Row = (props) => (
   <View style={[styles.row, props.noSpace && styles.noRowSpace, props.style]}>
     {props.children}
   </View>
+);
+
+export const Image = (props) => (
+  <ImageFrame source={props.source} style={props.style} resizeMode="contain" />
 );
 
 export const AccountCard = ({ data }) => {
