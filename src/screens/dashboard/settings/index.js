@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-elements';
+import { Actions } from 'react-native-router-flux';
 import { profileLarge } from '../../../../assets/images';
 import {
   Account,
@@ -83,6 +84,7 @@ export default class Settings extends Component {
         icon={<Account />}
         title="Account Management"
         style={{ marginTop: hp(4) }}
+        onPress={() => Actions.account()}
       />
       <SettingsItem icon={<ProfileGroup />} title="Next of Kin" />
       <SettingsItem icon={<Profile />} title="Edit Profile" />

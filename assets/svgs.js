@@ -480,3 +480,20 @@ export const Biometrics = (props) => (
     />
   </Svg>
 );
+
+export const ButtonPlus = (props) => (
+  <Svg
+    width={12}
+    height={12}
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M6 0a.75.75 0 00-.75.75v4.5H.75a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5V.75A.75.75 0 006 0z"
+      fill="#fff"
+    />
+  </Svg>
+);

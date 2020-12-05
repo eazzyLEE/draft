@@ -9,6 +9,7 @@ import Dashboard from './screens/dashboard';
 import Notifications from './screens/dashboard/Notifications';
 import Onboarding from './screens/onboarding';
 import Settings from './screens/dashboard/settings';
+import Account from './screens/dashboard/settings/account';
 
 export default class RouterComponent extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class RouterComponent extends Component {
           <Scene key="dashboard" component={Dashboard} />
           <Scene key="notifications" component={Notifications} />
           <Scene key="settings" component={Settings} />
+          <Scene key="account" component={Account} />
         </Scene>
       </Router>
     );

@@ -121,10 +121,11 @@ export const SettingsItem = ({
   toggle,
   toggled,
   toggleChange,
+  onPress,
 }) => {
   return (
     <>
-      <TouchableOpacity style={[styles.settingsRow, style]}>
+      <TouchableOpacity style={[styles.settingsRow, style]} onPress={onPress}>
         <View
           style={[
             styles.iconView,
