@@ -21,3 +21,6 @@ export const LinkWater = '#D6E4F1';
 export const Serenade = '#FFF4E9';
 export const BurntSienna = '#EB5757';
 export const CaribbeanGreen = '#00CD8D';
+export const AppleGreen = '#E4F5F0';
+export const FairPink = '#FFE9E9';
+export const Eucalyptus = '#219653';

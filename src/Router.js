@@ -10,6 +10,11 @@ import Notifications from './screens/dashboard/Notifications';
 import Onboarding from './screens/onboarding';
 import Settings from './screens/dashboard/settings';
 import Account from './screens/dashboard/settings/account';
+import AddAccount from './screens/dashboard/settings/account/AddAccount';
+import NextOfKin from './screens/dashboard/settings/NextOfKin';
+import Profile from './screens/dashboard/settings/Profile';
+import Kyc from './screens/dashboard/settings/kyc';
+import Upload from './screens/dashboard/settings/kyc/Upload';
 
 export default class RouterComponent extends Component {
   render() {
@@ -26,6 +31,11 @@ export default class RouterComponent extends Component {
           <Scene key="notifications" component={Notifications} />
           <Scene key="settings" component={Settings} />
           <Scene key="account" component={Account} />
+          <Scene key="add_account" component={AddAccount} />
+          <Scene key="next_of_kin" component={NextOfKin} />
+          <Scene key="profile" component={Profile} />
+          <Scene key="kyc" component={Kyc} />
+          <Scene key="upload" component={Upload} />
         </Scene>
       </Router>
     );

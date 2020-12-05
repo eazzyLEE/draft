@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Divider } from 'react-native-elements';
+import { Actions } from 'react-native-router-flux';
 import { ButtonPlus } from '../../../../../assets/svgs';
 import {
   DarkBlue,
@@ -41,7 +42,12 @@ const Account = () => {
         <AccountView accountName="Savings Account" />
         <AccountView accountName="Current Account" />
         <View style={styles.bottomContainer}>
-          <Button title="Add New" style={styles.button} icon={<ButtonPlus />} />
+          <Button
+            title="Add New"
+            style={styles.button}
+            icon={<ButtonPlus />}
+            onPress={() => Actions.add_account()}
+          />
         </View>
       </MainView>
     </View>

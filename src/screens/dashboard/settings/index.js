@@ -86,9 +86,23 @@ export default class Settings extends Component {
         style={{ marginTop: hp(4) }}
         onPress={() => Actions.account()}
       />
-      <SettingsItem icon={<ProfileGroup />} title="Next of Kin" />
-      <SettingsItem icon={<Profile />} title="Edit Profile" />
-      <SettingsItem icon={<Document />} title="Document & KYC" last progress />
+      <SettingsItem
+        icon={<ProfileGroup />}
+        title="Next of Kin"
+        onPress={() => Actions.next_of_kin()}
+      />
+      <SettingsItem
+        icon={<Profile />}
+        title="Edit Profile"
+        onPress={() => Actions.profile()}
+      />
+      <SettingsItem
+        icon={<Document />}
+        title="Document & KYC"
+        onPress={() => Actions.kyc()}
+        last
+        progress
+      />
     </>
   );
 

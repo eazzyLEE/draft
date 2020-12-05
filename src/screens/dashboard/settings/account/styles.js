@@ -78,4 +78,15 @@ export const accountStyles = StyleSheet.create({
     borderWidth: 1,
     width: '100%',
   },
+
+  mainAccountView: {
+    marginTop: hp(20),
+    flex: 1,
+  },
+  input: {
+    marginTop: hp(32),
+  },
+  accountButton: {
+    marginTop: hp(52),
+  },
 });
