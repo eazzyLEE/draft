@@ -19,3 +19,5 @@ export const Grey100 = '#E8EEF4';
 export const HawkesBlue = '#E8F2FD';
 export const LinkWater = '#D6E4F1';
 export const Serenade = '#FFF4E9';
+export const BurntSienna = '#EB5757';
+export const CaribbeanGreen = '#00CD8D';

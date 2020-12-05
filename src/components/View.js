@@ -15,6 +15,7 @@ import {
   TransferIcon,
 } from '../../assets/svgs';
 import {
+  BurntSienna,
   DarkBlue,
   Grey100,
   LinkWater,
@@ -23,6 +24,7 @@ import {
   Smoke400,
   White,
 } from './Colors';
+import { Switch } from './Switch';
 import { HeaderText, ParagraphText, RegularText } from './Text';
 import { hp, wp } from './utils';
 
@@ -109,17 +111,68 @@ const progressbar = (
   </View>
 );
 
-export const SettingsItem = ({ icon, title, style, last, progress }) => {
+export const SettingsItem = ({
+  icon,
+  title,
+  style,
+  last,
+  progress,
+  logout,
+  toggle,
+  toggled,
+  toggleChange,
+}) => {
   return (
     <>
       <TouchableOpacity style={[styles.settingsRow, style]}>
-        <View style={styles.iconView}>{icon}</View>
-        <HeaderText title={title} style={styles.settingsTitle} />
-        {progress ? progressbar : null}
-        <View style={styles.rightItem}>
-          <ListRightChevrolet />
+        <View
+          style={[
+            styles.iconView,
+            logout && { backgroundColor: 'rgba(208, 12, 12, 0.12)' },
+          ]}>
+          {icon}
         </View>
+        <HeaderText
+          title={title}
+          style={[styles.settingsTitle, logout && { color: BurntSienna }]}
+        />
+        {progress ? progressbar : null}
+        {!logout ? (
+          <View style={styles.rightItem}>
+            {toggle ? (
+              <Switch value={toggled} onValueChange={toggleChange} />
+            ) : (
+              <ListRightChevrolet />
+            )}
+          </View>
+        ) : null}
       </TouchableOpacity>
+      {!last ? <Divider style={styles.settingsDivider} /> : null}
+    </>
+  );
+};
+
+export const SettingsToggle = ({
+  icon,
+  title,
+  style,
+  last,
+  logout,
+  toggled,
+  toggleChange,
+}) => {
+  return (
+    <>
+      <View style={[styles.settingsRow, style]}>
+        <View style={styles.iconView}>{icon}</View>
+        <HeaderText
+          title={title}
+          style={[styles.settingsTitle, logout && { color: BurntSienna }]}
+        />
+        <View style={styles.rightItem}>
+          <Switch value={toggled} onValueChange={toggleChange} />
+        </View>
+      </View>
       {!last ? <Divider style={styles.settingsDivider} /> : null}
     </>
   );

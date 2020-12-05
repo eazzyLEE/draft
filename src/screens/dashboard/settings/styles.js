@@ -5,6 +5,7 @@ import {
   HawkesBlue,
   hp,
   LinkWater,
+  Selago,
   White,
   wp,
 } from '../../../components';
@@ -69,8 +70,9 @@ export const settingStyles = StyleSheet.create({
   baseView: {
     marginTop: 0,
     bottom: 0,
-    height: hp(392),
+    height: hp(390),
     backgroundColor: White,
+    position: 'absolute',
   },
   baseInactiveView: {
     marginTop: 0,
@@ -78,5 +80,36 @@ export const settingStyles = StyleSheet.create({
     backgroundColor: LinkWater,
     bottom: 0,
     position: 'absolute',
+  },
+  notificationHeader: {
+    color: DarkBlue,
+    marginTop: hp(5),
+    fontSize: 16,
+  },
+  notificationDivider: {
+    width: wp(360),
+    height: 1,
+    marginTop: hp(24),
+    backgroundColor: Selago,
+  },
+  subText: {
+    width: wp(184),
+    marginTop: hp(32),
+    fontSize: 14,
+    textAlign: 'center',
+    letterSpacing: 1,
+  },
+  inAppView: {
+    alignItems: 'center',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: hp(35),
+    width: wp(296),
+  },
+  button: {
+    width: wp(140),
   },
 });
