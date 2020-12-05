@@ -1,19 +1,44 @@
 import React from 'react';
-import { Image as ImageFrame, StyleSheet, View } from 'react-native';
+import {
+  Image as ImageFrame,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { Divider } from 'react-native-elements';
+import * as Progress from 'react-native-progress';
 import {
   AirtimeIcon,
   BillIcon,
   ClosedEye,
+  ListRightChevrolet,
   TransferIcon,
 } from '../../assets/svgs';
-import { DarkBlue, Grey100, Smoke400, White } from './Colors';
+import {
+  DarkBlue,
+  Grey100,
+  LinkWater,
+  Orange,
+  Serenade,
+  Smoke400,
+  White,
+} from './Colors';
 import { HeaderText, ParagraphText, RegularText } from './Text';
 import { hp, wp } from './utils';
 
 export const MainView = (props) => {
   return (
     <View style={[styles.mainBackground, props.style]}>{props.children}</View>
+  );
+};
+
+export const TouchableView = (props) => {
+  return (
+    <TouchableOpacity
+      style={[styles.mainBackground, props.style]}
+      onPress={props.onPress}>
+      {props.children}
+    </TouchableOpacity>
   );
 };
 
@@ -67,6 +92,36 @@ export const AccountCard = ({ data }) => {
       </Row>
       <Divider style={styles.accountDivider} />
     </View>
+  );
+};
+
+const progressbar = (
+  <View style={{ marginLeft: wp(75.3) }}>
+    <Progress.Bar
+      progress={0.4}
+      width={wp(40)}
+      height={hp(8)}
+      color={Orange}
+      borderColor={White}
+      unfilledColor={LinkWater}
+      borderRadius={20}
+    />
+  </View>
+);
+
+export const SettingsItem = ({ icon, title, style, last, progress }) => {
+  return (
+    <>
+      <TouchableOpacity style={[styles.settingsRow, style]}>
+        <View style={styles.iconView}>{icon}</View>
+        <HeaderText title={title} style={styles.settingsTitle} />
+        {progress ? progressbar : null}
+        <View style={styles.rightItem}>
+          <ListRightChevrolet />
+        </View>
+      </TouchableOpacity>
+      {!last ? <Divider style={styles.settingsDivider} /> : null}
+    </>
   );
 };
 
@@ -150,5 +205,37 @@ const styles = StyleSheet.create({
   itemRow: {
     width: wp(268),
     marginTop: hp(16),
+  },
+  settingsRow: {
+    width: wp(328),
+    marginTop: hp(16),
+    flexDirection: 'row',
+    alignSelf: 'center',
+    alignItems: 'center',
+  },
+  rightItem: {
+    position: 'absolute',
+    right: 0,
+  },
+  settingsTitle: {
+    fontSize: 16,
+    fontWeight: 'normal',
+    marginLeft: wp(20),
+  },
+  settingsDivider: {
+    width: wp(344),
+    height: 1,
+    alignSelf: 'flex-end',
+    backgroundColor: Grey100,
+    marginTop: hp(16),
+    opacity: 0.5,
+  },
+  iconView: {
+    width: wp(40),
+    height: hp(40),
+    borderRadius: 8,
+    backgroundColor: Serenade,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

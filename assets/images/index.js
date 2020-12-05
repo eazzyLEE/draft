@@ -11,3 +11,4 @@ export const sunrise = require('./sunrise.png');
 export const airtel = require('./airtel.png');
 export const dstv = require('./dstv.png');
 export const gtbank = require('./gtbank.png');
+export const profileLarge = require('./profile-large.png');

@@ -51,11 +51,15 @@ export default class Dashboard extends Component {
       <View style={styles.background}>
         <StatusBar barStyle="light-content" backgroundColor={DarkBlue} />
         <View style={styles.leadRow}>
-          <Image
-            source={profileImage}
-            style={styles.profileImage}
-            resizeMode="contain"
-          />
+          <TouchableOpacity
+            style={styles.notificationButton}
+            onPress={() => Actions.settings()}>
+            <Image
+              source={profileImage}
+              style={styles.profileImage}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
           <Image
             source={mainLogo}
             style={styles.mainLogo}

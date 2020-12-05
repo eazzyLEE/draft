@@ -8,6 +8,7 @@ import SignIn from './screens/authentication/SignIn';
 import Dashboard from './screens/dashboard';
 import Notifications from './screens/dashboard/Notifications';
 import Onboarding from './screens/onboarding';
+import Settings from './screens/dashboard/settings';
 
 export default class RouterComponent extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class RouterComponent extends Component {
           <Scene key="register" component={Register} />
           <Scene key="dashboard" component={Dashboard} />
           <Scene key="notifications" component={Notifications} />
+          <Scene key="settings" component={Settings} />
         </Scene>
       </Router>
     );

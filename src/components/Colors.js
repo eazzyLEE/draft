@@ -16,3 +16,6 @@ export const Negroni = '#FFE4C5';
 export const AthensGray = '#F5F7F9';
 export const DarkBlue100 = '#005196';
 export const Grey100 = '#E8EEF4';
+export const HawkesBlue = '#E8F2FD';
+export const LinkWater = '#D6E4F1';
+export const Serenade = '#FFF4E9';
