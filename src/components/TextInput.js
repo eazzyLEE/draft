@@ -11,16 +11,14 @@ const Input = (
 ) => {
   return (
     <View style={[styles.container, icon && styles.iconView, containerStyle]}>
-      <Item
-        floatingLabel
-        // underline={false}
-        style={[styles.inputContainer]}>
+      <Item floatingLabel underline={false} style={[styles.inputContainer]}>
         <Label style={{ fontSize: 13, color: BaliHai }}>{label}</Label>
         <TextInput
           style={[styles.input, icon && styles.iconInput, style]}
           value={value}
           onChangeText={onChange}
           keyboardType={keyboardType}
+          underlineColorAndroid="transparent"
           {...props}
         />
       </Item>
@@ -40,12 +38,14 @@ const styles = StyleSheet.create({
     width: wp(328),
     height: hp(52),
     borderColor: 'transparent',
+    borderWidth: 0,
   },
   input: {
     // width: wp(328),
     marginTop: -hp(10),
     height: hp(52),
     fontSize: 16,
+    borderWidth: 0,
   },
   iconInput: {
     width: wp(290),

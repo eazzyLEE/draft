@@ -1,0 +1,24 @@
+diff --git a/node_modules/react-native/react.gradle b/node_modules/react-native/react.gradle
+index 6441d93..c28cbd4 100644
+--- a/node_modules/react-native/react.gradle
++++ b/node_modules/react-native/react.gradle
+@@ -302,6 +302,11 @@ afterEvaluate {
+             enabled(currentBundleTask.enabled)
+         }
+ 
++        // mergeResources task runs before the bundle file is copied to the intermediate asset directory from Android plugin 4.1+.
++        // This ensures to copy the bundle file before mergeResources task starts
++        def mergeResourcesTask = tasks.findByName("merge${targetName}Resources")
++        mergeResourcesTask.dependsOn(currentAssetsCopyTask)
++
+         packageTask.dependsOn(currentAssetsCopyTask)
+         if (buildPreBundleTask != null) {
+             buildPreBundleTask.dependsOn(currentAssetsCopyTask)
+diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
+new file mode 100644
+index 0000000..21a13cf
+--- /dev/null
++++ b/node_modules/react-native/scripts/.packager.env
+@@ -0,0 +1 @@
++export RCT_METRO_PORT=8081
+\ No newline at end of file

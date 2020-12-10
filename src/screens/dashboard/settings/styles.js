@@ -150,7 +150,7 @@ export const nextOfKinStyles = StyleSheet.create({
     borderBottomWidth: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
+    borderTopWidth: 1,
     width: '100%',
   },
   profileLarge: {

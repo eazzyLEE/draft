@@ -22,11 +22,11 @@ export const getStartedStyle = StyleSheet.create({
     marginLeft: wp(17),
   },
   phoneCard: {
-    width: wp(561),
+    width: '120%', // wp(561),
     height: hp(336),
     marginTop: hp(43),
     // marginBottom: -hp(35),
-    left: -wp(101),
+    left: '-10%', // wp(11),
     // position: 'absolute',
     // zIndex: -1000,
   },

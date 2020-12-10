@@ -55,6 +55,6 @@ export const styles = StyleSheet.create({
     margin: hp(10),
   },
   buttonContainer: {
-    marginTop: -hp(40),
+    marginTop: -hp(70),
   },
 });

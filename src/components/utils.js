@@ -3,7 +3,7 @@ import {
   heightPercentageToDP as hdp,
 } from 'react-native-responsive-screen';
 
-const CustomHeight = 740 - 34;
+const CustomHeight = 750; // 740;
 const CustomWidth = 360;
 
 export const hp = (value) => {

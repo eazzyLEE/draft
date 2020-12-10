@@ -23,7 +23,7 @@ const GetStarted = () => {
         <Image
           source={phoneCard}
           style={styles.phoneCard}
-          resizeMode="contain"
+          // resizeMode="contain"
         />
         <MainView style={styles.mainView}>
           <HeaderText title="Hey there" style={styles.leadText} />
