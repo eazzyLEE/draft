@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { BackArrow, Close, DropdownSvg } from '../../../../assets/svgs';
-import { HeaderText, hp, RegularText, wp } from '../../../components';
-import { Button } from '../../../components/Button';
-import { FlatList } from '../../../components/List';
-import { BankListItem, BeneficiaryItem, Row } from '../../../components/View';
-import { sceneOne as styles } from './styles';
+import { BackArrow, Close, DropdownSvg } from '../../../../../assets/svgs';
+import { HeaderText, hp, RegularText, wp } from '../../../../components';
+import { Button } from '../../../../components/Button';
+import { FlatList } from '../../../../components/List';
+import {
+  BankListItem,
+  BeneficiaryItem,
+  Row,
+} from '../../../../components/View';
+import { sceneOne as styles } from '../styles';
 
 const data = [
   'Access Bank',

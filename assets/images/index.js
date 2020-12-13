@@ -12,3 +12,4 @@ export const airtel = require('./airtel.png');
 export const dstv = require('./dstv.png');
 export const gtbank = require('./gtbank.png');
 export const profileLarge = require('./profile-large.png');
+export const blueTouchId = require('./touch-id-blue.png');

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Keyboard, TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-elements';
 import { HeaderText, hp, RegularText } from '../../../components';
-import { CurrentScreenOne } from './Current';
+import { CurrentScreenOne } from './scenes/SceneOne';
 import { transferStyles as styles } from './styles';
-import { SceneTwo } from './utils';
+import { SceneTwo } from './scenes/SceneTwo';
+import { SceneThree } from './scenes/SceneThree';
 
 export default class Transfers extends Component {
   state = {
-    currentIndex: 2,
+    currentIndex: 3,
     keyboardView: false,
   };
 
@@ -74,7 +75,9 @@ export default class Transfers extends Component {
         case 1:
           return <CurrentScreenOne progress={() => this.progress(2)} />;
         case 2:
-          return <SceneTwo progress={() => this.progress(2)} />;
+          return <SceneTwo progress={() => this.progress(3)} />;
+        case 3:
+          return <SceneThree progress={() => this.progress(2)} />;
         default:
           return TransferSource;
       }

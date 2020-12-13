@@ -272,3 +272,91 @@ export const sceneTwo = StyleSheet.create({
     width: wp(292),
   },
 });
+
+export const sceneThree = StyleSheet.create({
+  ...sceneTwo,
+  midBlock: {
+    height: hp(59),
+    width: wp(328),
+    borderTopWidth: 1,
+    borderColor: Grey100,
+    backgroundColor: White,
+  },
+  amountRow: {
+    marginTop: hp(20),
+    justifyContent: 'space-between',
+    width: wp(290),
+  },
+  amountSubRow: {
+    justifyContent: 'space-between',
+    width: wp(269),
+  },
+  amountText: {
+    fontSize: 16,
+    color: BaliHai,
+  },
+  amountValue: {
+    color: BlueWood,
+    fontSize: 16,
+  },
+  bottomBlock: {
+    height: hp(163),
+    width: wp(328),
+    // marginTop: hp(72),
+    backgroundColor: AthensGray,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    borderTopWidth: 1,
+    borderColor: Grey100,
+  },
+  authorizationRow: {
+    width: wp(296),
+    justifyContent: 'space-between',
+    marginTop: hp(20),
+  },
+  authorizationText: {
+    color: DarkBlue,
+    fontSize: 16,
+  },
+  fingerprintText: {
+    fontSize: 16,
+    color: Orange,
+  },
+  otpContainer: {
+    marginTop: hp(5),
+    height: hp(62),
+    width: wp(296),
+    alignSelf: 'center',
+    color: BlueWood,
+  },
+  otpInput: {
+    width: wp(62),
+    height: hp(52),
+    borderColor: Boticelli,
+    color: BlueWood,
+    borderRadius: 3,
+    fontSize: 16,
+  },
+  activeOtpInput: {
+    width: wp(62),
+    height: hp(52),
+    fontSize: 29,
+    borderColor: Boticelli,
+    color: BlueWood,
+    borderRadius: 3,
+  },
+  touchIdBackground: {
+    width: wp(60),
+    height: hp(60),
+    borderRadius: 8,
+    backgroundColor: Boticelli,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginTop: hp(24),
+  },
+  touchId: {
+    width: wp(33.3),
+    height: hp(40),
+  },
+});

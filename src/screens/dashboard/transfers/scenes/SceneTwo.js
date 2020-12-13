@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { TextInput, TouchableOpacity, View } from 'react-native';
-import { ClearIcon, DropdownSvg } from '../../../../assets/svgs';
-import { HeaderText, ParagraphText, RegularText } from '../../../components';
-import { Button } from '../../../components/Button';
-import { Row } from '../../../components/View';
-import { sceneTwo as styles } from './styles';
+import { ClearIcon, DropdownSvg } from '../../../../../assets/svgs';
+import { HeaderText, ParagraphText, RegularText } from '../../../../components';
+import { Button } from '../../../../components/Button';
+import { Row } from '../../../../components/View';
+import { sceneTwo as styles } from '../styles';
 
-export const SceneTwo = () => {
+export const SceneTwo = ({ progress }) => {
   const [amount, setAmount] = useState('');
   return (
     <>
@@ -76,7 +76,11 @@ export const SceneTwo = () => {
             </TouchableOpacity>
           </>
         ) : (
-          <Button title="Continue" style={styles.button} />
+          <Button
+            title="Continue"
+            style={styles.button}
+            onPress={() => progress()}
+          />
         )}
       </Row>
       {/* </KeyboardAwareScrollView> */}
