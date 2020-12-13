@@ -85,6 +85,8 @@ export const dashboardStyles = StyleSheet.create({
   },
   dashboardButtonRow: {
     width: wp(224),
+    position: 'absolute',
+    bottom: 28,
   },
   dashboardButton: {
     width: wp(56),
@@ -93,6 +95,23 @@ export const dashboardStyles = StyleSheet.create({
     backgroundColor: Orange,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  activeButton: {
+    width: wp(128),
+    height: hp(56),
+    backgroundColor: White,
+    borderRadius: 56,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  activeButtonRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  menuTitle: {
+    color: Orange,
+    fontSize: 14,
+    marginLeft: wp(12),
   },
 });
 

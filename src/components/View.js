@@ -15,6 +15,9 @@ import {
   TransferIcon,
 } from '../../assets/svgs';
 import {
+  BaliHai,
+  BlueWood,
+  Boticelli,
   BurntSienna,
   DarkBlue,
   Grey100,
@@ -179,6 +182,31 @@ export const SettingsToggle = ({
   );
 };
 
+export const BeneficiaryItem = ({ item }) => {
+  return (
+    <View style={styles.beneficiaryView}>
+      <HeaderText title="Firstname Lastname" style={styles.beneficiaryName} />
+      <RegularText
+        title={`0123456789 - ${item}`}
+        style={styles.accountDetails}
+      />
+      <Divider style={styles.beneficiaryDivider} />
+    </View>
+  );
+};
+
+export const BankListItem = ({ item }) => {
+  return (
+    <View style={styles.bankView}>
+      <Row style={styles.bankRow}>
+        <RegularText title={item} style={styles.bankName} />
+        <View style={styles.inactiveDot} />
+      </Row>
+      <Divider style={styles.bankDivider} />
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   mainBackground: {
     flex: 1,
@@ -291,5 +319,47 @@ const styles = StyleSheet.create({
     backgroundColor: Serenade,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  beneficiaryView: {
+    marginLeft: wp(16),
+    marginTop: hp(16),
+  },
+  beneficiaryName: {
+    fontSize: 14,
+    color: BlueWood,
+  },
+  account: {
+    fontSize: 14,
+    color: BaliHai,
+  },
+  beneficiaryDivider: {
+    width: wp(296),
+    marginTop: hp(16),
+    backgroundColor: Grey100,
+    height: 1,
+  },
+  bankView: {
+    marginTop: hp(16),
+  },
+  bankName: {
+    fontSize: 14,
+    color: BlueWood,
+  },
+  bankDivider: {
+    width: wp(312),
+    marginTop: hp(16),
+    backgroundColor: Grey100,
+    height: 1,
+    alignSelf: 'flex-end',
+  },
+  inactiveDot: {
+    width: wp(16),
+    height: wp(16),
+    borderRadius: wp(16) / 2,
+    backgroundColor: Boticelli,
+  },
+  bankRow: {
+    justifyContent: 'space-between',
+    width: '90%',
   },
 });

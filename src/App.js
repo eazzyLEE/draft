@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { setCustomText } from 'react-native-global-props';
-import { BlueWood } from './components';
+// import { BlueWood } from './components';
 import Router from './Router';
 
 const customTextProps = {
   style: {
-    color: BlueWood,
+    // color: BlueWood,
     fontSize: 14,
   },
 };
