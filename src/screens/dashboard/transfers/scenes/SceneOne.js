@@ -56,7 +56,7 @@ export const CurrentScreenOne = ({ progress }) => {
         <KeyboardAwareScrollView>
           <View style={styles.topRow}>
             <RegularText title="From Current Account" style={styles.leadText} />
-            <HeaderText title="N7,100,810" style={styles.amount} />
+            <HeaderText title="₦7,100,810" style={styles.amount} />
           </View>
           <View style={styles.mainBlock}>
             <View style={styles.recipientGrid}>

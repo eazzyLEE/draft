@@ -18,6 +18,7 @@ import {
   wp,
 } from '../../components';
 import { BatchedView, Row } from '../../components/View';
+import Bills from './bills';
 import Home from './home';
 import { dashboardStyles as styles } from './styles';
 import Transfers from './transfers';
@@ -25,7 +26,7 @@ import Transfers from './transfers';
 export default class Dashboard extends Component {
   state = {
     activeSlide: 0,
-    currentScreen: 'Transfers',
+    currentScreen: 'Home',
     transferPosition: 0,
     batchLength: 0,
   };
@@ -67,6 +68,7 @@ export default class Dashboard extends Component {
   render() {
     const { batchLength, currentScreen, transferPosition } = this.state;
     const newTransfer = transferPosition === 3;
+    const home = currentScreen === 'Home';
     const CurrentScreenView = () => {
       switch (currentScreen) {
         case 'Transfers':
@@ -74,6 +76,13 @@ export default class Dashboard extends Component {
             <Transfers
               position={(value) => this.setPosition(value)}
               batchLength={this.state.batchLength}
+            />
+          );
+        case 'Bills':
+          return (
+            <Bills
+            // position={(value) => this.setPosition(value)}
+            // batchLength={this.state.batchLength}
             />
           );
         default:
@@ -84,25 +93,29 @@ export default class Dashboard extends Component {
     return (
       <View style={styles.background}>
         <StatusBar barStyle="light-content" backgroundColor={DarkBlue} />
-        <Row style={styles.topNavRow}>
-          <TouchableOpacity style={styles.return}>
-            <ReturnHome />
-          </TouchableOpacity>
+        {!home ? (
+          <Row style={styles.topNavRow}>
+            <TouchableOpacity
+              style={styles.return}
+              onPress={() => this.onPress('Home')}>
+              <ReturnHome />
+            </TouchableOpacity>
 
-          {newTransfer && !batchLength ? (
-            <Row style={styles.navRow}>
-              <RegularText
-                title="New Transfer"
-                style={styles.newTransferText}
-              />
-              <TouchableOpacity
-                style={styles.return}
-                onPress={() => this.updateBatch()}>
-                <ButtonPlus fill={Orange} />
-              </TouchableOpacity>
-            </Row>
-          ) : null}
-        </Row>
+            {newTransfer && !batchLength ? (
+              <Row style={styles.navRow}>
+                <RegularText
+                  title="New Transfer"
+                  style={styles.newTransferText}
+                />
+                <TouchableOpacity
+                  style={styles.return}
+                  onPress={() => this.updateBatch()}>
+                  <ButtonPlus fill={Orange} />
+                </TouchableOpacity>
+              </Row>
+            ) : null}
+          </Row>
+        ) : null}
 
         {batchLength > 0 ? (
           <ScrollView style={{ position: 'absolute', top: hp(15) }}>
@@ -122,7 +135,7 @@ export default class Dashboard extends Component {
             {this.footerButton(
               <BillIcon fill={White} />,
               <BillIcon fill={Orange} />,
-              'Bill Payment',
+              'Pay Bills',
               currentScreen === 'Bills',
             )}
           </TouchableOpacity>

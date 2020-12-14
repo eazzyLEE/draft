@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { Keyboard, TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-elements';
 import { HeaderText, hp, RegularText } from '../../../components';
-import { CurrentScreenOne } from './scenes/SceneOne';
-import { transferStyles as styles } from './styles';
 import { SceneTwo } from './scenes/SceneTwo';
+import { SceneOne } from './scenes/SceneOne';
+import { billStyles as styles } from './styles';
 import { SceneThree } from './scenes/SceneThree';
 import { SceneFour } from './scenes/SceneFour';
+import { SceneFive } from './scenes/SceneFive';
 
-export default class Transfers extends Component {
+export default class Bills extends Component {
   state = {
-    currentIndex: 0,
+    currentIndex: 4,
     keyboardView: false,
   };
 
@@ -25,16 +26,6 @@ export default class Transfers extends Component {
     );
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const { currentIndex } = this.state;
-    if (prevState.currentIndex !== currentIndex && currentIndex === 3) {
-      this.props.position(3);
-    }
-    if (prevProps.batchLength !== this.props.batchLength) {
-      this.setState({ currentIndex: 1 });
-    }
-  }
-
   keyboardDidShow = () => {
     this.setState({ keyboardView: true });
   };
@@ -45,11 +36,12 @@ export default class Transfers extends Component {
 
   handleChange = (prop, value) => this.setState({ [prop]: value });
 
-  // handleHeight = () => {
-  //   const { currentIndex } = this.state;
-  //   if (currentIndex !== 0 || currentIndex !== 4) return hp(398);
-  //   return hp(256);
-  // };
+  handleHeight = () => {
+    const { currentIndex } = this.state;
+    if (currentIndex === 0) return hp(256);
+    if (currentIndex === 4 || currentIndex === 5) return hp(398);
+    return hp(544);
+  };
 
   progress = (screen) => this.setState({ currentIndex: screen });
 
@@ -57,7 +49,10 @@ export default class Transfers extends Component {
     const { currentIndex, keyboardView } = this.state;
     const TransferSource = (
       <>
-        <HeaderText title="Send Money from?" style={styles.sendText} />
+        <HeaderText
+          title="Select account to pay bills from"
+          style={styles.sendText}
+        />
         <Divider style={styles.mainDivider} />
 
         <TouchableOpacity
@@ -81,26 +76,24 @@ export default class Transfers extends Component {
       </>
     );
 
-    const handleHeight = () => {
-      // const { currentIndex } = this.state;
-      if (currentIndex !== 0 && currentIndex !== 4) return hp(398);
-      return hp(256);
-    };
+    // const handleHeight = () => {
+    //   // const { currentIndex } = this.state;
+    //   if (currentIndex !== 0 && currentIndex !== 4) return hp(544);
+    //   return hp(256);
+    // };
 
     const handleView = () => {
       switch (currentIndex) {
         case 1:
-          return <CurrentScreenOne progress={() => this.progress(2)} />;
+          return <SceneOne progress={() => this.progress(2)} />;
         case 2:
-          return (
-            <SceneTwo
-              progress={() => this.progress(this.props.batchLength ? 4 : 3)}
-            />
-          );
+          return <SceneTwo progress={() => this.progress(3)} />;
         case 3:
-          return <SceneThree progress={() => this.progress(2)} />;
+          return <SceneThree progress={() => this.progress(4)} />;
         case 4:
-          return <SceneFour progress={() => this.progress(2)} />;
+          return <SceneFour progress={() => this.progress(5)} />;
+        case 5:
+          return <SceneFive progress={() => this.progress(5)} />;
         default:
           return TransferSource;
       }
@@ -110,10 +103,8 @@ export default class Transfers extends Component {
       <View
         style={[
           styles.background,
-          { height: handleHeight() },
-          !keyboardView &&
-            // currentIndex !== 3 &&
-            currentIndex !== 4 && { bottom: hp(120) },
+          { height: this.handleHeight() },
+          !keyboardView && { bottom: hp(120) }, // currentIndex !== 4 && // currentIndex !== 3 &&
         ]}>
         <Divider style={styles.bottomTrigger} />
 
