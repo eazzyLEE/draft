@@ -73,7 +73,10 @@ export default class Settings extends Component {
     if (this.state.active === 'base')
       return [
         styles.midInactiveView,
-        { height: hp(467), backgroundColor: this.state.base[1] },
+        {
+          height: hp(497), // hp(467),
+          backgroundColor: this.state.base[1],
+        },
       ];
     return [styles.midInactiveView, { backgroundColor: this.state.top[1] }];
   };
@@ -116,6 +119,7 @@ export default class Settings extends Component {
           icon={<Security />}
           title="Security"
           style={{ marginTop: hp(4) }}
+          onPress={() => Actions.security()}
         />
         <SettingsToggle
           icon={<Biometrics />}

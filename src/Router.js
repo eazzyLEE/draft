@@ -15,6 +15,9 @@ import NextOfKin from './screens/dashboard/settings/NextOfKin';
 import Profile from './screens/dashboard/settings/Profile';
 import Kyc from './screens/dashboard/settings/kyc';
 import Upload from './screens/dashboard/settings/kyc/Upload';
+import Security from './screens/dashboard/settings/security';
+import UpdatePin from './screens/dashboard/settings/security/UpdatePin';
+import UpdatePassword from './screens/dashboard/settings/security/UpdatePassword';
 
 export default class RouterComponent extends Component {
   render() {
@@ -36,6 +39,9 @@ export default class RouterComponent extends Component {
           <Scene key="profile" component={Profile} />
           <Scene key="kyc" component={Kyc} />
           <Scene key="upload" component={Upload} />
+          <Scene key="security" component={Security} />
+          <Scene key="update_pin" component={UpdatePin} />
+          <Scene key="update_password" component={UpdatePassword} />
         </Scene>
       </Router>
     );

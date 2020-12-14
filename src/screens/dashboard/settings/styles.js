@@ -68,12 +68,12 @@ export const settingStyles = StyleSheet.create({
     bottom: 0,
     backgroundColor: White,
     position: 'absolute',
-    height: hp(466),
+    height: hp(500), // hp(466),
   },
   baseView: {
     marginTop: 0,
     bottom: 0,
-    height: hp(390),
+    height: hp(420), // hp(390),
     backgroundColor: White,
     position: 'absolute',
   },
@@ -137,7 +137,7 @@ export const nextOfKinStyles = StyleSheet.create({
   },
   mainAccountView: {
     marginTop: hp(20),
-    flex: 1,
+    // flex: 1,
   },
   input: {
     marginTop: hp(16),
@@ -147,6 +147,7 @@ export const nextOfKinStyles = StyleSheet.create({
     bottom: 0,
     height: hp(68),
     borderTopColor: Selago,
+    backgroundColor: White,
     borderBottomWidth: 0,
     justifyContent: 'center',
     alignItems: 'center',

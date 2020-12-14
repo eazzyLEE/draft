@@ -10,8 +10,10 @@ import { nextOfKinStyles as styles } from './styles';
 
 const NextOfKin = () => {
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   return (
     <View style={styles.background}>
+      {/* <KeyboardAwareScrollView> */}
       <StatusBar barStyle="light-content" backgroundColor={DarkBlue} />
       <View style={styles.backIconRow}>
         <BackIcon />
@@ -19,6 +21,8 @@ const NextOfKin = () => {
       </View>
       <MainView style={styles.mainAccountView}>
         <KeyboardAwareScrollView>
+          {/* style={{ flex: 1 }}
+          contentContainerStyle={{ height: '80%', marginBottom: hp(20) }}> */}
           <Input
             label="First Name"
             value={email}
@@ -41,6 +45,14 @@ const NextOfKin = () => {
             onChange={(value) => setEmail(value)}
             containerStyle={styles.input}
             keyboardType="email-address"
+          />
+
+          <Input
+            label="Phone Number"
+            value={phone}
+            onChange={(value) => setPhone(value)}
+            containerStyle={styles.input}
+            keyboardType="number-pad"
           />
 
           <Input
@@ -92,6 +104,7 @@ const NextOfKin = () => {
           />
         </View>
       </MainView>
+      {/* </KeyboardAwareScrollView> */}
     </View>
   );
 };
