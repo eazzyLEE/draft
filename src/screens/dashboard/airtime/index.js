@@ -4,12 +4,10 @@ import { Divider } from 'react-native-elements';
 import { HeaderText, hp, RegularText } from '../../../components';
 import { SceneTwo } from './scenes/SceneTwo';
 import { SceneOne } from './scenes/SceneOne';
-import { billStyles as styles } from './styles';
+import { airtimeStyles as styles } from './styles';
 import { SceneThree } from './scenes/SceneThree';
-import { SceneFour } from './scenes/SceneFour';
-import { SceneFive } from './scenes/SceneFive';
 
-export default class Bills extends Component {
+export default class Airtime extends Component {
   state = {
     currentIndex: 0,
     keyboardView: false,
@@ -40,7 +38,7 @@ export default class Bills extends Component {
     const { currentIndex } = this.state;
     if (currentIndex === 0) return hp(256);
     if (currentIndex === 4 || currentIndex === 5) return hp(398);
-    return hp(544);
+    return hp(398);
   };
 
   progress = (screen) => this.setState({ currentIndex: screen });
@@ -50,7 +48,7 @@ export default class Bills extends Component {
     const TransferSource = (
       <>
         <HeaderText
-          title="Select account to pay bills from"
+          title="Select account to buy airtime from"
           style={styles.sendText}
         />
         <Divider style={styles.mainDivider} />
@@ -90,10 +88,10 @@ export default class Bills extends Component {
           return <SceneTwo progress={() => this.progress(3)} />;
         case 3:
           return <SceneThree progress={() => this.progress(4)} />;
-        case 4:
-          return <SceneFour progress={() => this.progress(5)} />;
-        case 5:
-          return <SceneFive progress={() => this.progress(5)} />;
+        // case 4:
+        //   return <SceneFour progress={() => this.progress(5)} />;
+        // case 5:
+        //   return <SceneFive progress={() => this.progress(5)} />;
         default:
           return TransferSource;
       }

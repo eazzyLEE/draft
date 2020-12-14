@@ -184,12 +184,12 @@ export const SettingsToggle = ({
   );
 };
 
-export const BeneficiaryItem = ({ item }) => {
+export const BeneficiaryItem = ({ item, phone }) => {
   return (
     <View style={styles.beneficiaryView}>
       <HeaderText title="Firstname Lastname" style={styles.beneficiaryName} />
       <RegularText
-        title={`0123456789 - ${item}`}
+        title={phone ? `08034567891 - ${item}` : `0123456789- ${item}`}
         style={styles.accountDetails}
       />
       <Divider style={styles.beneficiaryDivider} />

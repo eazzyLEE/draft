@@ -1,6 +1,6 @@
 import React from 'react';
 import Svg, { Circle, Path, Rect } from 'react-native-svg';
-import { Orange, White, wp } from '../src/components';
+import { White, wp } from '../src/components';
 
 export const RightChevrolet = (props) => (
   <Svg
@@ -216,19 +216,19 @@ export const AirtimeIcon = (props) => (
       width={16.667}
       height={25}
       rx={3}
-      fill={props.fill ? Orange : '#fff'}
-      stroke={props.fill ? White : '#99BDDB'}
+      fill={props.rectFill || White}
+      stroke={props.stroke || '#99BDDB'}
       strokeWidth={1.5}
     />
     <Path
       d="M9.444 17.023c-1.273 0-2.063-.462-2.566-1.097v.245c0 .47-.383.852-.856.852a.854.854 0 01-.855-.852v-2.557c0-.47.382-.853.855-.853H8.59a.854.854 0 110 1.704H7.99c.298.699.753.853 1.454.853 1.415 0 2.567-1.135 2.567-2.53a2.578 2.578 0 00-2.567-2.584c-.78 0-1.29.214-1.754.738a.856.856 0 01-1.207.075.85.85 0 01-.075-1.204C7.192 8.93 8.184 8.5 9.444 8.5a4.288 4.288 0 014.278 4.289c0 2.334-1.919 4.234-4.278 4.234z"
-      fill={props.fill ? White : '#99BDDB'}
+      fill={props.curve || '#99BDDB'}
     />
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M9.154 23.273c.637 0 1.154-.509 1.154-1.137 0-.627-.517-1.136-1.154-1.136C8.517 21 8 21.509 8 22.136c0 .628.517 1.137 1.154 1.137z"
-      fill={props.fill || '#99BDDB'}
+      fill={props.dot || '#99BDDB'}
     />
   </Svg>
 );

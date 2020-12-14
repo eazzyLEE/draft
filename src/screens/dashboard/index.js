@@ -18,6 +18,7 @@ import {
   wp,
 } from '../../components';
 import { BatchedView, Row } from '../../components/View';
+import Airtime from './airtime';
 import Bills from './bills';
 import Home from './home';
 import { dashboardStyles as styles } from './styles';
@@ -69,6 +70,7 @@ export default class Dashboard extends Component {
     const { batchLength, currentScreen, transferPosition } = this.state;
     const newTransfer = transferPosition === 3;
     const home = currentScreen === 'Home';
+    const transfers = currentScreen === 'Transfers';
     const CurrentScreenView = () => {
       switch (currentScreen) {
         case 'Transfers':
@@ -79,12 +81,9 @@ export default class Dashboard extends Component {
             />
           );
         case 'Bills':
-          return (
-            <Bills
-            // position={(value) => this.setPosition(value)}
-            // batchLength={this.state.batchLength}
-            />
-          );
+          return <Bills />;
+        case 'Airtime':
+          return <Airtime />;
         default:
           return <Home />;
       }
@@ -101,7 +100,7 @@ export default class Dashboard extends Component {
               <ReturnHome />
             </TouchableOpacity>
 
-            {newTransfer && !batchLength ? (
+            {newTransfer && transfers && !batchLength ? (
               <Row style={styles.navRow}>
                 <RegularText
                   title="New Transfer"
@@ -149,8 +148,19 @@ export default class Dashboard extends Component {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.onPress('Airtime')}>
             {this.footerButton(
-              <AirtimeIcon fill={White} />,
-              <AirtimeIcon fill={Orange} />,
+              <AirtimeIcon
+                rectFill={Orange}
+                stroke={White}
+                curve={White}
+                dot={White}
+              />,
+              <AirtimeIcon
+                rectFill={White}
+                stroke={Orange}
+                curve={Orange}
+                dot={Orange}
+                enabled
+              />,
               'Airtime',
               currentScreen === 'Airtime',
             )}
