@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { Divider } from 'react-native-elements';
 import * as Progress from 'react-native-progress';
+import { Actions } from 'react-native-router-flux';
 import {
   AirtimeIcon,
   BillIcon,
@@ -97,7 +98,13 @@ export const AccountCard = ({ data }) => {
         </View>
         <HeaderText title="5,000" style={styles.accountValue} />
       </Row>
-      <Divider style={styles.accountDivider} />
+      <TouchableOpacity onPress={() => Actions.transactions()}>
+        <RegularText
+          title="View all transactions"
+          style={styles.transactionsText}
+        />
+      </TouchableOpacity>
+      {/* <Divider style={styles.accountDivider} /> */}
     </View>
   );
 };
@@ -412,5 +419,12 @@ const styles = StyleSheet.create({
   amount: {
     color: White,
     fontSize: 14,
+  },
+  transactionsText: {
+    alignSelf: 'center',
+    color: Orange,
+    fontSize: 14,
+    marginTop: hp(20),
+    fontWeight: 'bold',
   },
 });

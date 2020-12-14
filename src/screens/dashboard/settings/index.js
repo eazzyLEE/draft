@@ -144,7 +144,11 @@ export default class Settings extends Component {
           toggled={this.state.notifications}
           toggleChange={() => this.handleNotificationToggle()}
         />
-        <SettingsItem icon={<Privacy />} title="Privacy" />
+        <SettingsItem
+          icon={<Privacy />}
+          title="Privacy"
+          onPress={() => Actions.privacy()}
+        />
         <SettingsItem
           icon={<Terms />}
           title="Terms & Conditions"

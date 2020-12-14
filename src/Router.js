@@ -19,6 +19,9 @@ import Security from './screens/dashboard/settings/security';
 import UpdatePin from './screens/dashboard/settings/security/UpdatePin';
 import UpdatePassword from './screens/dashboard/settings/security/UpdatePassword';
 import Terms from './screens/dashboard/settings/legal/Terms';
+import Privacy from './screens/dashboard/settings/legal/Privacy';
+import Transactions from './screens/dashboard/transactions';
+import TransactionDetail from './screens/dashboard/transactions/TransactionDetail';
 
 export default class RouterComponent extends Component {
   render() {
@@ -44,6 +47,9 @@ export default class RouterComponent extends Component {
           <Scene key="update_pin" component={UpdatePin} />
           <Scene key="update_password" component={UpdatePassword} />
           <Scene key="terms" component={Terms} />
+          <Scene key="privacy" component={Privacy} />
+          <Scene key="transactions" component={Transactions} />
+          <Scene key="transaction_detail" component={TransactionDetail} />
         </Scene>
       </Router>
     );
