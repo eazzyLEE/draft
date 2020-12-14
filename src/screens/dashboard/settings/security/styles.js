@@ -124,3 +124,33 @@ export const updatePasswordStyles = StyleSheet.create({
     width: '100%',
   },
 });
+
+export const termsStyles = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: DarkBlue,
+  },
+  backIconRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: wp(16),
+    marginTop: hp(10),
+  },
+  leadText: {
+    fontSize: 18,
+    color: White,
+    marginLeft: wp(16),
+  },
+  mainView: {
+    marginTop: hp(20),
+    paddingTop: hp(15),
+  },
+  termsText: {
+    height: hp(551),
+    width: wp(328),
+    marginTop: hp(32),
+    color: BlueWood,
+    lineHeight: 24,
+    fontSize: 14,
+  },
+});

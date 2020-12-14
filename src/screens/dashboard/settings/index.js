@@ -145,7 +145,12 @@ export default class Settings extends Component {
           toggleChange={() => this.handleNotificationToggle()}
         />
         <SettingsItem icon={<Privacy />} title="Privacy" />
-        <SettingsItem icon={<Terms />} title="Terms & Conditions" last />
+        <SettingsItem
+          icon={<Terms />}
+          title="Terms & Conditions"
+          onPress={() => Actions.terms()}
+          last
+        />
         <SettingsItem icon={<Logout />} title="Log Out" last logout />
       </>
     );

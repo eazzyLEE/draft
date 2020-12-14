@@ -18,6 +18,7 @@ import Upload from './screens/dashboard/settings/kyc/Upload';
 import Security from './screens/dashboard/settings/security';
 import UpdatePin from './screens/dashboard/settings/security/UpdatePin';
 import UpdatePassword from './screens/dashboard/settings/security/UpdatePassword';
+import Terms from './screens/dashboard/settings/legal/Terms';
 
 export default class RouterComponent extends Component {
   render() {
@@ -42,6 +43,7 @@ export default class RouterComponent extends Component {
           <Scene key="security" component={Security} />
           <Scene key="update_pin" component={UpdatePin} />
           <Scene key="update_password" component={UpdatePassword} />
+          <Scene key="terms" component={Terms} />
         </Scene>
       </Router>
     );
