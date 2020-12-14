@@ -25,3 +25,5 @@ export const AppleGreen = '#E4F5F0';
 export const FairPink = '#FFE9E9';
 export const Eucalyptus = '#219653';
 export const White200 = '#DEE6F2';
+export const MorningGlory = '#99BDDB';
+export const BostonBlue = '#3B88C8';

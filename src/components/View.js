@@ -17,9 +17,11 @@ import {
 import {
   BaliHai,
   BlueWood,
+  BostonBlue,
   Boticelli,
   BurntSienna,
   DarkBlue,
+  Denim,
   Grey100,
   LinkWater,
   Orange,
@@ -207,6 +209,22 @@ export const BankListItem = ({ item }) => {
   );
 };
 
+export const BatchedView = () => {
+  return (
+    <View style={styles.batchedView}>
+      <Divider style={styles.bottomTrigger} />
+      <Row style={styles.userRow}>
+        <RegularText title="Firstname Lastname" style={styles.userDetails} />
+        <RegularText title="₦ 12,500.00" style={styles.amount} />
+      </Row>
+      <RegularText
+        title="0123456789 = Stanbic IBTC Bank"
+        style={styles.userAccount}
+      />
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   mainBackground: {
     flex: 1,
@@ -361,5 +379,38 @@ const styles = StyleSheet.create({
   bankRow: {
     justifyContent: 'space-between',
     width: '90%',
+  },
+  batchedView: {
+    width: wp(328),
+    height: hp(100),
+    borderRadius: 20,
+    backgroundColor: Denim,
+  },
+  bottomTrigger: {
+    height: 4,
+    width: wp(40),
+    borderRadius: 50,
+    backgroundColor: BostonBlue,
+    marginTop: hp(16),
+    alignSelf: 'center',
+  },
+  userRow: {
+    width: wp(296),
+    justifyContent: 'space-between',
+    marginTop: hp(10),
+  },
+  userDetails: {
+    color: White,
+    fontSize: 14,
+  },
+  userAccount: {
+    color: White,
+    fontSize: 14,
+    marginTop: hp(4),
+    marginLeft: wp(16),
+  },
+  amount: {
+    color: White,
+    fontSize: 14,
   },
 });

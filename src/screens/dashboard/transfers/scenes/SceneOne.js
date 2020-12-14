@@ -48,7 +48,7 @@ const BankSearch = ({ closeBankList }) => {
 
 export const CurrentScreenOne = ({ progress }) => {
   const [accountNumber, setAccount] = useState('');
-  const [savedBeneficiary, newBeneficiary] = useState(false);
+  const [savedBeneficiary, newBeneficiary] = useState(true);
   const [bankList, showBanks] = useState(false);
   return (
     <View>

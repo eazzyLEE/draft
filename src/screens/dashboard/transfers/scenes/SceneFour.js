@@ -1,49 +1,20 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
-import { DropdownSvg } from '../../../../../assets/svgs';
-import { HeaderText, ParagraphText, RegularText } from '../../../../components';
+import { HeaderText, RegularText } from '../../../../components';
 import { Image, Row } from '../../../../components/View';
-import { sceneThree as styles } from '../styles';
+import { sceneFour as styles } from '../styles';
 import { blueTouchId } from '../../../../../assets/images';
 
-export const SceneThree = ({ progress }) => {
+export const SceneFour = ({ progress }) => {
+  const [biometrics, setBiometrics] = useState(false);
   const [otp, setOtp] = useState('');
-  const [biometrics, setBiometrics] = useState(true);
   return (
     <View style={{ flex: 1 }}>
-      {/* <KeyboardAwareScrollView> */}
       <View style={styles.topRow}>
-        <RegularText title="From Current Account" style={styles.leadText} />
-        <HeaderText title="N7,100,810" style={styles.amount} />
-        <DropdownSvg />
+        <RegularText title="Send money to 2 accounts" style={styles.leadText} />
       </View>
-      <View style={styles.topBlock}>
-        <View style={styles.beneficiaryRow}>
-          <HeaderText title="To:" style={styles.beneficiaryTitle} />
-          <HeaderText
-            title="Firstname Lastname Middlename"
-            style={styles.beneficiaryName}
-          />
-          <View style={styles.dropdown}>
-            <DropdownSvg />
-          </View>
-        </View>
-        <RegularText
-          title="0123456789 - Stanbic IBTC Bank"
-          style={styles.bankDetail}
-        />
-      </View>
-      <View style={styles.midBlock}>
-        <Row style={styles.amountRow}>
-          <Row style={styles.amountSubRow}>
-            <ParagraphText title="Amount" style={styles.amountText} />
-            <ParagraphText title="₦ 5,000" style={styles.amountValue} />
-          </Row>
-          <DropdownSvg />
-        </Row>
-      </View>
-      <View style={styles.bottomBlock}>
+      <View style={styles.bottomRow}>
         <Row style={styles.authorizationRow}>
           <HeaderText
             title="Authorize Transfers"
@@ -77,7 +48,6 @@ export const SceneThree = ({ progress }) => {
           </TouchableOpacity>
         )}
       </View>
-      {/* </KeyboardAwareScrollView> */}
     </View>
   );
 };

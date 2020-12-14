@@ -360,3 +360,32 @@ export const sceneThree = StyleSheet.create({
     height: hp(40),
   },
 });
+
+export const sceneFour = StyleSheet.create({
+  ...sceneThree,
+  topRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: hp(32),
+    width: wp(284),
+    justifyContent: 'space-between',
+    alignSelf: 'center',
+  },
+  bottomRow: {
+    height: hp(159),
+    width: wp(328),
+    marginTop: hp(20),
+    backgroundColor: AthensGray,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    borderTopWidth: 1,
+    borderColor: Grey100,
+  },
+  otpContainer: {
+    marginTop: hp(15),
+    height: hp(62),
+    width: wp(296),
+    alignSelf: 'center',
+    color: BlueWood,
+  },
+});

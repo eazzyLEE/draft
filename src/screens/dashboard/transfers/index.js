@@ -6,10 +6,11 @@ import { CurrentScreenOne } from './scenes/SceneOne';
 import { transferStyles as styles } from './styles';
 import { SceneTwo } from './scenes/SceneTwo';
 import { SceneThree } from './scenes/SceneThree';
+import { SceneFour } from './scenes/SceneFour';
 
 export default class Transfers extends Component {
   state = {
-    currentIndex: 3,
+    currentIndex: 4,
     keyboardView: false,
   };
 
@@ -24,6 +25,16 @@ export default class Transfers extends Component {
     );
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { currentIndex } = this.state;
+    if (prevState.currentIndex !== currentIndex && currentIndex === 3) {
+      this.props.position(3);
+    }
+    if (prevProps.batchLength !== this.props.batchLength) {
+      this.setState({ currentIndex: 1 });
+    }
+  }
+
   keyboardDidShow = () => {
     this.setState({ keyboardView: true });
   };
@@ -34,11 +45,11 @@ export default class Transfers extends Component {
 
   handleChange = (prop, value) => this.setState({ [prop]: value });
 
-  handleHeight = () => {
-    const { currentIndex } = this.state;
-    if (currentIndex !== 0) return hp(398);
-    return hp(256);
-  };
+  // handleHeight = () => {
+  //   const { currentIndex } = this.state;
+  //   if (currentIndex !== 0 || currentIndex !== 4) return hp(398);
+  //   return hp(256);
+  // };
 
   progress = (screen) => this.setState({ currentIndex: screen });
 
@@ -70,14 +81,26 @@ export default class Transfers extends Component {
       </>
     );
 
+    const handleHeight = () => {
+      // const { currentIndex } = this.state;
+      if (currentIndex !== 0 && currentIndex !== 4) return hp(398);
+      return hp(256);
+    };
+
     const handleView = () => {
       switch (currentIndex) {
         case 1:
           return <CurrentScreenOne progress={() => this.progress(2)} />;
         case 2:
-          return <SceneTwo progress={() => this.progress(3)} />;
+          return (
+            <SceneTwo
+              progress={() => this.progress(this.props.batchLength ? 4 : 3)}
+            />
+          );
         case 3:
           return <SceneThree progress={() => this.progress(2)} />;
+        case 4:
+          return <SceneFour progress={() => this.progress(2)} />;
         default:
           return TransferSource;
       }
@@ -87,7 +110,7 @@ export default class Transfers extends Component {
       <View
         style={[
           styles.background,
-          { height: this.handleHeight() },
+          { height: handleHeight() },
           !keyboardView && { bottom: hp(120) },
         ]}>
         <Divider style={styles.bottomTrigger} />

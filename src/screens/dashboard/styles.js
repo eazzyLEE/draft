@@ -5,6 +5,7 @@ import {
   DarkBlue100,
   Grey100,
   hp,
+  MorningGlory,
   Orange,
   Smoke400,
   White,
@@ -16,6 +17,25 @@ export const dashboardStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: DarkBlue,
     alignItems: 'center',
+  },
+  topNavRow: {
+    width: wp(328),
+    justifyContent: 'space-between',
+  },
+  return: {
+    width: wp(36),
+    height: wp(36),
+    borderRadius: wp(36) / 2,
+    backgroundColor: White,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 10,
+  },
+  newTransferText: {
+    fontSize: 16,
+    color: MorningGlory,
+    fontWeight: 'bold',
+    marginRight: wp(12),
   },
   leadRow: {
     flexDirection: 'row',
