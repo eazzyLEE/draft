@@ -43,7 +43,7 @@ const Transactions = () => {
           </Row>
         </TouchableOpacity>
         <Divider style={styles.accountDivider} />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => Actions.transaction_detail()}>
           <Row noSpace style={styles.itemRow}>
             <Image source={gtbank} style={styles.notifImage} />
             <View style={styles.accountTypeColumn}>
@@ -91,11 +91,11 @@ const Transactions = () => {
           <HeaderText title="₦500" style={styles.time} />
         </Row>
         <Fab
-          direction="down"
+          direction="up"
           containerStyle={{}}
           style={{ backgroundColor: Orange }}
           position="bottomRight"
-          onPress={() => this.BottomOverlay.open()}>
+          onPress={() => {}}>
           <Download />
         </Fab>
       </MainView>
