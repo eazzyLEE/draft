@@ -74,7 +74,11 @@ export default class SignIn extends Component {
                 />
               </TouchableOpacity>
               <View style={styles.loginView}>
-                <Button title="Sign In" style={styles.logIn} />
+                <Button
+                  title="Sign In"
+                  style={styles.logIn}
+                  onPress={() => Actions.dashboard({ type: 'reset' })}
+                />
               </View>
             </View>
             <View style={styles.dividerRow}>
